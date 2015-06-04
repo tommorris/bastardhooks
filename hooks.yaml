@@ -7,6 +7,6 @@
 -   id: no_stupid_php
     name: No Stupid PHP
     description: "Checks for PHP snafus"
-    language: bastardhooks/no_stupid_php.py
+    language: python
     entry: bastardhooks/no_stupid_php.py
     files: \.(php|php5|phtml|phph4|php3|phps)$
