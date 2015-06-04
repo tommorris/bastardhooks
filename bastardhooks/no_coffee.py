@@ -17,7 +17,7 @@ def detect_coffee(argv=None):
 
     if len(coffeescript_files) > 0:
         for cs_file in coffeescript_files:
-            print('CoffeScript file found: {0}'.format(cs_file))
+            print('CoffeeScript file found: {0}'.format(cs_file))
         return 1
     else:
         return 0
