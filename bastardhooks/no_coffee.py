@@ -13,7 +13,7 @@ def detect_coffee(argv=None):
     coffeescript_files = []
     for filename in args.filenames:
         if filename.endswith(".coffee"):
-            cofeescript_files.append(filename)
+            coffeescript_files.append(filename)
 
     if len(coffeescript_files) > 0:
         for cs_file in coffeescript_files:
