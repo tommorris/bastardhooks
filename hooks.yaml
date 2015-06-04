@@ -1,12 +1,12 @@
 -   id: no_coffee
     name: No Coffee
     description: "Checks to make sure there aren't any CoffeeScript files in the repository"
-    language: python
-    entry: bastardhooks/no_coffee.py
+    language: script
+    entry: python bastardhooks/no_coffee.py
     files: \.coffee$
 -   id: no_stupid_php
     name: No Stupid PHP
     description: "Checks for PHP snafus"
-    language: python
-    entry: bastardhooks/no_stupid_php.py
+    language: script
+    entry: python bastardhooks/no_stupid_php.py
     files: \.(php|php5|phtml|phph4|php3|phps)$
