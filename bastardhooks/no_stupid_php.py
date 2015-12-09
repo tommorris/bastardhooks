@@ -20,11 +20,17 @@ def detect_bad_php(argv=None):
             counter = 0
             for line in content:
                 counter = counter + 1
-                if 'magic_quotes' in line:
+                if 'magic_quotes' in line.lower():
                     err = generate_error('magic_quotes', counter, line, filename)
                     errors.append(err)
                 if 'extract($_get)' in line.lower():
                     err = generate_error('extract_get', counter, line, filename)
+                    errors.append(err)
+                if 'goto' in line.lower():
+                    err = generate_error('goto', counter, line, filename)
+                    errors.append(goto)
+                if 'ereg_' in line.lower():
+                    err = generate_error('ereg functions are deprecated', counter, line, filename)
                     errors.append(err)
     if len(errors) > 0:
         for error in errors:
