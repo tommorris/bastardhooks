@@ -36,7 +36,7 @@ def detect_bad_php(argv=None):
         for error in errors:
             output = "Found {0} error on line {1} of {2}: {3}"
             output = output.format(error['type'], error['line_num'],
-                                   error['filename'], error['line']))
+                                   error['filename'], error['line'])
             print(output)
         return 1
     else:

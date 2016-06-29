@@ -39,7 +39,7 @@ def detect_rspec_focus(argv=None):
         for error in errors:
             output = "Found {0} on line {1} of {2}: {3}"
             output = output.format(error['type'], error['line_num'],
-                                   error['filename'], error['line']))
+                                   error['filename'], error['line'])
             print(output)
         return 1
     else:
