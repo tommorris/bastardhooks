@@ -5,7 +5,7 @@ import argparse
 import io
 import sys
 
-def generate_error(type, counter, line):
+def generate_error(type, counter, line, filename):
     return {'type': type, 'line_num': counter, 'line': line, 'filename': filename}
 
 def detect_rspec_focus(argv=None):
