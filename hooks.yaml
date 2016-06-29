@@ -10,3 +10,9 @@
     language: script
     entry: bastardhooks/no_stupid_php.py
     files: \.(php|php5|phtml|phph4|php3|phps)$
+-   id: check_for_rspec_focus
+    name: Check for RSpec Focus
+    description: "Checks for RSpec focus (fdescribe, fcontext etc.)"
+    language: script
+    entry: bastardhooks/check_for_rspec_focus.py
+    files: \_spec.rb$
