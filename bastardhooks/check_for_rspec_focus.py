@@ -3,6 +3,7 @@ from __future__ import print_function, unicode_literals
 
 import argparse
 import io
+import re
 import sys
 
 def generate_error(type, counter, line, filename):
@@ -15,7 +16,7 @@ def detect_rspec_focus(argv=None):
 
     errors = []
     for filename in args.filenames:
-        with io.open(filename, 'r') as f:
+        with io.open(filename, 'r', encoding="utf8") as f:
             content = f.readlines()
             counter = 0
             for line in content:
@@ -30,7 +31,7 @@ def detect_rspec_focus(argv=None):
                 if 'fcontext' in line.lower():
                     err = generate_error('fcontext', counter, line, filename)
                     errors.append(err)
-                if 'fit ' in line.lower():
+                if re.search('fit [\'"]', line.lower()):
                     err = generate_error('fit', counter, line, filename)
                     errors.append(err)
                 if 'focus:' in line.lower():
