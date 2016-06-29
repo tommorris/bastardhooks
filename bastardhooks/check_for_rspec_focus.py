@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 
 import argparse
 import io
@@ -19,6 +19,7 @@ def detect_rspec_focus(argv=None):
             content = f.readlines()
             counter = 0
             for line in content:
+                line = unicode(line)
                 counter = counter + 1
                 if 'fscenario' in line.lower():
                     err = generate_error('fscenario', counter, line, filename)
