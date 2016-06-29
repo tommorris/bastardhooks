@@ -31,7 +31,7 @@ def detect_rspec_focus(argv=None):
                     errors.append(err)
                 if 'fit ' in line.lower():
                     err = generate_error('fit', counter, line, filename)
-                    errors.append(goto)
+                    errors.append(err)
                 if 'focus:' in line.lower():
                     err = generate_error('focus:', counter, line, filename)
                     errors.append(err)
