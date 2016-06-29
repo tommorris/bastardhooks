@@ -20,6 +20,9 @@ def detect_rspec_focus(argv=None):
             counter = 0
             for line in content:
                 counter = counter + 1
+                if 'fscenario' in line.lower():
+                    err = generate_error('fscenario', counter, line, filename)
+                    errors.append(err)
                 if 'fdescribe' in line.lower():
                     err = generate_error('fdescribe', counter, line, filename)
                     errors.append(err)
