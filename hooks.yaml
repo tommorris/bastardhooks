@@ -16,3 +16,8 @@
     language: script
     entry: bastardhooks/check_for_rspec_focus.py
     files: \_spec.rb$
+-   id: secrets
+    name: Secrets
+    description: "Similar functionality to AWS git-secrets: check for public keys and other secret stuff"
+    language: script
+    entry: bastardhooks/secrets.py
